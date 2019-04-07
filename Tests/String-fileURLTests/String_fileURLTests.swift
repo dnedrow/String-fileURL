@@ -2,14 +2,21 @@ import XCTest
 @testable import String_fileURL
 
 final class String_fileURLTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(String_fileURL().text, "Hello, World!")
+
+    func testPathExtension() {
+        let expectedValue = "foo"
+        let fullyQualifiedPath = "~/test/test3/thisTest.foo"
+        XCTAssertEqual(fullyQualifiedPath.pathExtension, expectedValue)
+    }
+
+    func testLastPathComponent() {
+        let expectedValue = "thisTest"
+        let fullyQualifiedPath = "~/test/test3/thisTest"
+        XCTAssertEqual(fullyQualifiedPath.lastPathComponent, expectedValue)
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testPathExtension", testPathExtension),
+        ("testLastPathComponent", testLastPathComponent),
     ]
 }

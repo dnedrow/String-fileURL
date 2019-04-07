@@ -1,5 +1,6 @@
 import Foundation
 
+// MARK: - This String extension provides URL string computed variables.
 extension String {
     /// Returns the URL of the currently executing file.
     var fileURL: URL {
@@ -16,8 +17,3 @@ extension String {
         return fileURL.lastPathComponent
     }
 }
-
-//struct String_fileURL {
-//    var text = "Hello, World!"
-//}
-//
